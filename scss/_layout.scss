@@ -1,0 +1,109 @@
+// === Navbar sobre azul ===
+.hero-nav {
+  background-color: #0057ff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  .navbar-brand {
+    color: white;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+
+  .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 500;
+    margin-right: 1rem;
+
+    &:hover {
+      color: #fff !important;
+    }
+  }
+
+  .btn-outline-light {
+    border: 1px solid white;
+    color: white;
+
+    &:hover {
+      background-color: white;
+      color: #0057ff;
+    }
+  }
+
+  .btn-light {
+    color: #0057ff;
+    font-weight: 600;
+  }
+}
+
+// === Hero section ===
+.hero-section {
+  background-color: #0057ff;
+  color: white;
+  padding-top: 160px;
+  padding-bottom: 100px;
+  min-height: 100vh;
+  overflow: hidden;
+
+  .trusted {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.25rem; // 🔹 separa logos de forma moderna (Bootstrap ≥ 4.6 no tiene gap, pero Sass sí lo compila)
+  
+    p {
+      margin: 0;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.6);
+      margin-right: 0.75rem;
+    }
+  
+    .logo {
+      height: 22px;
+      opacity: 0.9;
+      transition: 0.3s ease;
+      filter: brightness(0) invert(1); // por si algún logo tiene color oscuro
+  
+      &:hover {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+    }
+  }
+  
+
+  .card-hero {
+    background: white;
+    border-radius: 20px;
+    padding: 1rem;
+    display: inline-block;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+
+// === Hero section diagonal inferior ===
+.hero-section {
+  background-color: #0057ff;
+  color: white;
+  padding-top: 160px;
+  padding-bottom: 100px;
+  position: relative;
+  overflow: hidden;
+
+  // --- diagonal ---
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: #fff;
+    clip-path: polygon(0 80%, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+

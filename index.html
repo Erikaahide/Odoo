@@ -13,13 +13,85 @@
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
     <!-- ========== STYLES (compiled from SCSS) ========== -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./scss/style.css" />
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-    <h1>Hello, world!</h1>
+    <body>
+        <!-- 🔹 Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark hero-nav fixed-top">
+          <div class="container">
+            <a class="navbar-brand font-weight-bold" href="#">odoo</a>
+      
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <ul class="navbar-nav align-items-lg-center">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Pages</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">App</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Docs</a></li>
+                <li class="nav-item ml-lg-3">
+                  <a class="btn btn-outline-light px-3" href="#">Sign in</a>
+                </li>
+                <li class="nav-item ml-2">
+                  <a class="btn btn-light text-primary px-3" href="#">Buy now</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      
+        <!-- 🔹 Hero Section -->
+        <section id="hero" class="hero-section">
+          <div class="container">
+            <div class="row align-items-center">
+              <!-- Texto -->
+              <div class="col-lg-6 text-white pr-lg-5">
+                <h1 class="display-4 font-weight-bold mb-3">
+                  Development done right
+                </h1>
+                <p class="lead text-white mb-4">
+                  Build a beautiful, modern website with flexible components built
+                  from scratch.
+                </p>
+                <a href="#" class="btn btn-light btn-lg px-4 mb-4">Get started +</a>
+      
+                <div class="trusted mt-4">
+                    <div class="d-flex align-items-center">
+                      <p class="text-white small mb-2">Trusted by</p>
+                    <img src="assets/google-white.svg" class="mr-3 logo" alt="Google" />
+                    <img src="assets/spotify-white.svg" class="mr-3 logo" alt="Spotify" />
+                    <img src="assets/airbnb-white.svg" class="mr-3 logo" alt="Airbnb" />
+                    <img src="assets/paypal-white.svg" class="logo" alt="PayPal" />
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Imagen derecha -->
+              <div class="col-lg-6 text-center mt-5 mt-lg-0">
+                <div class="card-hero shadow-lg rounded">
+                  <img
+                    src="img/card-dashboard.png"
+                    alt="Dashboard"
+                    class="img-fluid rounded"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      
 
     <!-- ========== JS FILES ========== -->
     <!-- jQuery and Bootstrap Bundle -->
