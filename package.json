@@ -1,0 +1,29 @@
+{
+  "name": "odoo-mock-up",
+  "version": "1.0.0",
+  "description": "Odoo Mockup using Bootstrap 4.6 and SCSS",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "sass --watch scss/style.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Erikaahide/Odoo.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "scss",
+    "mockup",
+    "interview",
+    "frontend"
+  ],
+  "author": "Erika Ahide",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Erikaahide/Odoo/issues"
+  },
+  "homepage": "https://github.com/Erikaahide/Odoo#readme",
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
+}
