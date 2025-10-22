@@ -4,12 +4,12 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 
-# Odoo Design Excersice – Bootstrap 4.6 + SCSS
+# Odoo Design Excersice
 
 This project is a **web mockup** built with **Bootstrap 4.6**, **SCSS**, and a focus on **desktop viewports (≥992px)**.  
 It was created as part of a **technical interview assessment** to demonstrate skills in modern layout development, SCSS variable management, and project organization best practices.
 
-**[GitHubPages Odoo](https://erikaahide.github.io/FrontendPortfolio/)**
+**[GitHubPages Odoo](https://erikaahide.github.io/Odoo/)**  
 **[GitHubPages Portfolio](https://erikaahide.github.io/FrontendPortfolio/)**
 ---
 
@@ -47,10 +47,10 @@ odoo-mockup/
 └── README.md
 ```
 ---
-
+## Mockup preview
 ![Mockup preview](./assets/mock-up.jpg)
 
 ---
-Erika Ahide
-Full Stack Developer & UX/UI Designer
+Erika Ahide   
+Full Stack Developer & UX/UI Designer   
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/erikaahg-desarrolladora-web/)
