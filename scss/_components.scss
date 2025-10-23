@@ -113,6 +113,14 @@
   padding: 0.35rem 0.8rem;
 }
 
+.badge-success-active {
+  background-color: $success;
+  color: $light;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.35rem 0.7rem;
+}
+
 .badge-primary {
   background-color: $primary;
   color: $light;

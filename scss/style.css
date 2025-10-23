@@ -9334,6 +9334,14 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 0.35rem 0.8rem;
 }
 
+.badge-success-active {
+  background-color: #3cb878;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.35rem 0.7rem;
+}
+
 .badge-primary {
   background-color: #1a73e8;
   color: #ffffff;
@@ -9541,6 +9549,73 @@ a.text-dark:hover, a.text-dark:focus {
   background: #ffffff;
   clip-path: polygon(0 80%, 100% 0, 100% 100%, 0% 100%);
 }
+.hero-section .hero-credit-card {
+  background: #ffffff;
+  border-radius: 23px 10px 60px 10px;
+  margin: 0 0 3rem;
+  max-width: 340px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 45px rgba(0, 87, 255, 0.25), 0 8px 18px rgba(0, 0, 0, 0.08), inset 0 0 20px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hero-section .hero-credit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 87, 255, 0.3), 0 12px 24px rgba(0, 0, 0, 0.1), inset 0 0 25px rgba(255, 255, 255, 0.12);
+}
+.hero-section .hero-credit-card .card-header h6 {
+  color: #0c1445;
+}
+.hero-section .hero-credit-card .credit-card {
+  position: relative;
+  background: rgb(18.8928571429, 92, 188.1071428571);
+  color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.hero-section .hero-credit-card .credit-pattern {
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 16%);
+  background-size: 20px 20px;
+  opacity: 0.2;
+  transform: rotate(45deg);
+}
+.hero-section .transactions {
+  border-top: 1px solid rgba(12, 20, 69, 0.06);
+  padding-top: 1rem;
+}
+.hero-section .transactions .transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+.hero-section .transactions .transaction .details {
+  color: rgba(12, 20, 69, 0.6);
+  font-size: 0.9rem;
+}
+.hero-section .transactions .transaction .details strong {
+  display: block;
+  color: #0c1445;
+  font-weight: 600;
+}
+.hero-section .transactions .transaction .amount {
+  font-weight: 600;
+  color: #0c1445;
+}
+.hero-section .transactions .view-all {
+  color: #1a73e8;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.hero-section .transactions .view-all:hover {
+  text-decoration: underline;
+}
 
 .projects-section {
   background-color: #ffffff;
@@ -9576,13 +9651,14 @@ a.text-dark:hover, a.text-dark:focus {
   padding-top: 3.5rem;
   width: 85%;
 }
-.projects-section h6 {
-  font-weight: 600;
-  color: #1a1a1a;
+.projects-section .transaction {
+  position: relative;
+  padding-right: 80px;
 }
-.projects-section li {
-  font-size: 0.95rem;
-  color: #1a1a1a;
+.projects-section .transaction span {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .projects-section .progress {
   height: 4px;
