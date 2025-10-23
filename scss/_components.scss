@@ -98,7 +98,7 @@
 
 // === Badges ===
 .badge-warning {
-  background-color: #ffcf4a;
+  background-color: $warning;
   color: $light;
   font-weight: 600;
   border-radius: 20px;
@@ -116,9 +116,15 @@
 .badge-success-active {
   background-color: $success;
   color: $light;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: 8px;
-  padding: 0.35rem 0.7rem;
+  padding: 0.6rem 0.7rem;
+  line-height: 1;
+  letter-spacing: 0.3px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 3;
 }
 
 .badge-primary {
