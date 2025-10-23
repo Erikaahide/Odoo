@@ -1,13 +1,13 @@
 // ========================================================
-// 🔹 VARIABLES PERSONALIZADAS
+// VARIABLES 
 // ========================================================
 
-// --- Paleta principal ---
-$primary: #0057ff;   // Azul Odoo
-$dark: #0c163b;      // Azul oscuro texto
+$primary: #1a73e8;   // Azul Odoo
+$primary-light: lighten($primary, 10%);
+$primary-dark: darken($primary, 10%);
+$dark: #0c1445;     // Azul oscuro texto
 $light: #ffffff;      // Blanco puro
 
-// --- Tipografía ---
 $font-family-base: "Open Sans", sans-serif;
 $font-size-base: 1rem;
 $headings-font-weight: 700;
@@ -17,17 +17,14 @@ $navbar-light-color: rgba(0, 0, 0, 0.8);
 $navbar-light-hover-color: $primary;
 $navbar-light-active-color: $primary;
 
-// --- Botones ---
+// --- Buttons ---
 $btn-border-radius: 8px;
 $btn-padding-y: 0.5rem;
 $btn-padding-x: 1.5rem;
 
-// --- Sombra estándar (para cards, imágenes, etc.) ---
+// --- Shadow---
 $box-shadow-base: 0 20px 40px rgba(0, 0, 0, 0.1);
 
-// ========================================================
-// 🔹 COLORES SECUNDARIOS (si se requieren más adelante)
-// ========================================================
 $gray-100: #f8f9fa;
 $gray-200: #e9ecef;
 $gray-300: #dee2e6;

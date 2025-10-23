@@ -446,17 +446,17 @@
 // ========================================================
 // FOOTER STYLES
 // ========================================================
-
 .footer-odoo {
   position: relative;
   background-color: $dark;
   color: $light;
   font-family: $font-family-base;
-  padding-top: 5rem;
+  padding-top: 6rem;
   padding-bottom: 3rem;
-  z-index: 2; 
   overflow: visible;
+  z-index: 2;
 
+  // --- Diagonal superior ---
   &::before {
     content: "";
     position: absolute;
@@ -466,74 +466,172 @@
     height: 180px;
     background: $dark;
     clip-path: polygon(0 40%, 100% 0, 100% 100%, 0% 100%);
-    z-index: 1;  // figura del fondo
+    z-index: 1;
     pointer-events: none;
   }
 
+  // --- Contenedor principal ---
   .container {
     position: relative;
-    z-index: 2; // eleva el contenido sobre la diagonal
+    z-index: 2;
+    max-width: 1200px;
   }
 
+  // --- Encabezado principal ---
+  .footer-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
 
-  a {
-    color: $gray-300;
-    text-decoration: none;
-
-    &:hover {
-      color: $gray-600;
+    h2 {
+      color: $light;
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 0.25rem;
     }
-  }
 
-  .btn-outline-light {
-    border-color: $light;
-    color: $light;
-
-    &:hover {
-      background-color: $gray-600;
-      color: $gray-600;
+    p {
+      color: rgba($light, 0.6);
+      font-weight: 500;
+      margin: 0;
     }
-  }
 
-  .social-icons a {
-    color: $light;
-    font-size: 1.25rem;
-    margin-right: 1rem;
-    transition: color 0.2s ease;
+    .footer-actions {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1rem;
 
-    &:hover {
-      color: $gray-600;
-    }
-  }
+      @media (min-width: 768px) {
+        margin-top: 0;
+      }
 
-  h2 {
-    font-weight: $headings-font-weight;
-  }
+      .btn {
+        font-weight: 600;
+        border-radius: 8px;
+        padding: 0.6rem 1.5rem;
+      }
 
-  h6 {
-    color: $light;
-  }
+      .btn-outline-light {
+        color: $light;
+        border: 1px solid rgba($light, 0.5);
+        border-radius: 8px;
+        padding: 0.6rem 1.5rem;
+        transition: all 0.2s ease;
+      
+        &:hover {
+          background-color: $light;
+          color: $dark;
+        }
+      }      
 
-  .opacity-10 {
-    opacity: 0.1;
-  }
-
-  ul {
-    padding-left: 0;
-    list-style: none;
-
-    li {
-      margin-bottom: 0.75rem;
-      color: $gray-300;
+      .btn-primary {
+        background-color: $primary;
+        border: none;
+        color: $light;
+        font-weight: 600;
+        border-radius: 8px;
+        padding: 0.6rem 1.5rem;
+        transition: background-color 0.2s ease, transform 0.1s ease;
+    
+        &:hover {
+          background-color: $primary-dark;
+          transform: translateY(-1px);
+        }
+    
+        &:active {
+          background-color: $primary-dark;
+          transform: translateY(0);
+        }
+      }
     }
   }
 
   hr {
-    border-color: $light;
+    border-color: rgba($light, 0.15);
+    margin: 2rem 0;
   }
 
-  .row > [class^="col-"] {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  // --- Secciones inferiores ---
+  .footer-bottom {
+    padding-top: 3rem;
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: rgba($light, 0.65);
+      max-width: 320px;
+      line-height: 1.6;
+    }
+
+    h6 {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 0.6rem;
+
+        a {
+          color: rgba($light, 0.65);
+          text-decoration: none;
+          font-size: 0.9rem;
+
+          &:hover {
+            color: $light;
+          }
+        }
+      }
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+
+      a {
+        color: rgba($light, 0.8);
+        font-size: 1.1rem;
+        margin-right: 1rem;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: $light;
+        }
+      }
+    }
+  }
+
+  // --- Línea final ---
+  .footer-legal {
+    border-top: 1px solid rgba($light, 0.1);
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    font-size: 0.85rem;
+    color: rgba($light, 0.5);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      color: rgba($light, 0.5);
+      margin-right: 1rem;
+      text-decoration: none;
+
+      &:hover {
+        color: $light;
+      }
+    }
   }
 }
