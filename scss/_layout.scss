@@ -1,5 +1,5 @@
 // ========================================================
-// LAYOUT — Secciones grandes
+// LAYOUT
 // ========================================================
 
 // Navbar
@@ -132,8 +132,6 @@
       top: 12px;
       right: 12px;
     }
-
-    // posición específica
   }
 
   .project-card {
@@ -163,7 +161,7 @@
     overflow: hidden;
 
     .progress-bar {
-      background-color: #ffcf4a;
+      background-color: $warning;
     }
   }
 }
@@ -173,13 +171,6 @@
   background-color: $light;
   color: $dark;
   padding: 6rem 0;
-
-  .badge-success {
-    font-size: 0.8rem;
-    padding: 0.35rem 0.9rem;
-    border-radius: 20px;
-    letter-spacing: 0.5px;
-  }
 
   h2 {
     font-weight: 700;
@@ -195,7 +186,7 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 1rem;
-    color: #6bc4a3;
+    color: $success;
     margin-bottom: 0.75rem;
 
     &::before {
@@ -203,7 +194,7 @@
       font-family: "Font Awesome 5 Free";
       font-weight: 900;
       font-size: 1.1rem;
-      color: #6bc4a3;
+      color: $success;
       margin-right: 0.6rem;
     }
   }
@@ -225,10 +216,113 @@
       top: 12px;
       left: 12px;
     }
-
-    // posición específica
   }
 }
+
+// Technologies
+.section-technologies {
+  padding: 5rem 0;
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.75rem;
+
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .tech-card {
+    background: $light;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(12, 20, 69, 0.05);
+    overflow: hidden;
+    transition: all 0.3s ease;
+  
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
+    }
+  
+    // 🔧 Control de proporciones de imagen
+    .tech-img {
+      width: 100%;
+      height: 260px; // Ajusta según tu diseño
+      object-fit: cover;
+      object-position: center;
+      border-radius: 12px 12px 0 0;
+      display: block;
+    }  
+  }
+
+}
+
+.tech-img-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 75%; // relación 4:3
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+// === Website UI Kit Card ===
+.tech-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.tech-avatars {
+  position: relative;
+  display: inline-flex;
+
+  .avatar-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid $light;
+    margin-left: -10px; // superposición suave
+    transition: all 0.2s ease;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      z-index: 2;
+    }
+  }
+}
+
+.tech-actions i {
+  font-size: 0.95rem;
+  color: $gray-600;
+  transition: color 0.2s ease;
+}
+
 
 // Download
 .download-section {
@@ -236,14 +330,6 @@
   padding-top: 8rem;
   padding-bottom: 14rem;
   position: relative;
-
-  .badge-primary {
-    background-color: $primary;
-    color: $light;
-    font-weight: 600;
-    border-radius: 20px;
-    padding: 0.4rem 0.8rem;
-  }
 
   h2 {
     font-size: 2rem;
@@ -274,8 +360,6 @@
       top: 12px;
       left: 12px;
     }
-
-    // posición específica
   }
 
   .store-buttons {
@@ -344,17 +428,6 @@
   }
 
   .awards-text {
-    .badge-info {
-      background-color: $primary;
-      color: $light;
-      font-weight: 600;
-      font-size: 0.8rem;
-      border-radius: 20px;
-      padding: 0.4rem 1rem;
-      text-transform: uppercase;
-      display: inline-block;
-    }
-
     h6 {
       color: $dark;
       font-weight: 700;
