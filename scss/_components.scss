@@ -1,6 +1,242 @@
-@media (min-width: 992px) {
-    .hero {
-      padding: 8rem 0;
+// ========================================================
+// COMPONENTS
+// ========================================================
+
+// === Btn ===
+.btn {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+// Primary (blue)
+.btn-primary {
+  background-color: $primary;
+  color: $light;
+  border: none;
+
+  &:hover {
+    background-color: darken($primary, 5%);
+    transform: translateY(-2px);
+  }
+}
+
+// light (white)
+.btn-light {
+  background-color: $light;
+  color: $dark;
+
+  &:hover {
+    transform: translateY(-2px) scale(1.03);
+    background: #fff;
+  }
+}
+
+// dark
+.btn-dark {
+  background-color: $dark;
+  color: $light;
+  border: none;
+
+  &:hover {
+    background-color: lighten($dark, 5%);
+  }
+}
+
+// === Arrow ===
+.btn-arrow {
+  position: relative;
+
+  &::after {
+    content: "→";
+    display: inline-block;
+    margin-left: 0.4rem;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover::after {
+    transform: translateX(4px);
+  }
+}
+
+// === Play buttons ===
+
+// Base style
+.btn-play {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 10px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px) scale(1.03);
+    background: #fff;
+  }
+}
+
+// Right positioned
+.btn-play-right {
+  @extend .btn-play;
+  top: 12px;
+  right: 12px;
+}
+
+// === Badges ===
+.badge-warning {
+  background-color: #ffcf4a;
+  color: $light;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 0.35rem 0.8rem;
+}
+
+.badge-success {
+  background-color: #3cb878;
+  color: $light;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 0.35rem 0.8rem;
+}
+
+.badge-primary {
+  background-color: $primary;
+  color: $light;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 0.35rem 0.8rem;
+}
+
+// === Cards ===
+.project-card,
+.award-card {
+  border-radius: 16px;
+  box-shadow: $box-shadow-base;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// === Infinite Card ===
+.infinite-card {
+  background-color: $dark;
+  color: $light;
+  border-radius: 0 64px 0 64px;
+  padding: 3rem 4rem;
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+
+  .infinite-text {
+    flex: 1;
+    max-width: 600px;
+
+    h5 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+
+    p {
+      color: rgba($light, 0.8);
+      line-height: 1.6;
     }
   }
+}
+
+// === Accordion ===
+.accordion {
+  .card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba($dark, 0.05);
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 6px 24px rgba($dark, 0.08);
+    }
+  }
+
+  .card-header {
+    background: transparent;
+    border: none;
+    padding: 0;
+
+    .btn-link {
+      color: $dark;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+
+      &:hover {
+        color: $primary;
+      }
+
+      &[aria-expanded="true"] {
+        color: $primary;
+
+        .icon {
+          transform: rotate(45deg);
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .card-body {
+    background-color: $light;
+    color: rgba($dark, 0.75);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+// === Footer Buttons ===
+.footer-actions .btn-outline-light {
+  color: $dark;
+  background: $light;
+  border: 1px solid rgba($light, 0.5);
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: $light;
+    color: $dark;
+  }
+}
+
+.footer-actions .btn-primary {
+  background-color: $primary;
+  color: $light;
+
+  &:hover {
+    background-color: darken($primary, 5%);
+  }
+}
+
   
