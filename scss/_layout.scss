@@ -1,98 +1,94 @@
-// === Navbar sobre azul ===
+// === Navbar ===
 .hero-nav {
-  background-color: #0057ff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: $primary;
+
+  .container {
+    border-bottom: 1px solid rgba($light, 0.2);
+    padding-bottom: 0.5rem;
+  }
 
   .navbar-brand {
-    color: white;
+    color: $light;
     font-weight: 700;
     font-size: 1.3rem;
   }
 
   .nav-link {
-    color: rgba(255, 255, 255, 0.85) !important;
+    color: rgba($light, 0.85) !important;
     font-weight: 500;
     margin-right: 1rem;
 
     &:hover {
-      color: #fff !important;
+      color: $light !important;
     }
   }
 
-  .btn-outline-light {
-    border: 1px solid white;
-    color: white;
+  .btn-signin {
+    background: transparent;
+    color: $light;
+    border: none;
+    font-weight: 500;
+    padding: 0.4rem 1rem;
 
     &:hover {
-      background-color: white;
-      color: #0057ff;
+      background: rgba($light, 0.1);
     }
   }
 
   .btn-light {
-    color: #0057ff;
+    color: $dark !important;
     font-weight: 600;
   }
 }
 
 // === Hero section ===
 .hero-section {
-  background-color: #0057ff;
-  color: white;
+  background-color: $primary;
+  color: $light;
   padding-top: 160px;
   padding-bottom: 100px;
   min-height: 100vh;
-  overflow: hidden;
+  position: relative;
+  z-index: 1; // contenido del hero
 
   .trusted {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1.25rem; // 🔹 separa logos de forma moderna (Bootstrap ≥ 4.6 no tiene gap, pero Sass sí lo compila)
-  
+    gap: 1.25rem;
+
     p {
       margin: 0;
       font-size: 0.85rem;
-      color: rgba(255, 255, 255, 0.6);
+      color: rgba($light, 0.6);
       margin-right: 0.75rem;
     }
-  
+
     .logo {
       height: 22px;
       opacity: 0.9;
       transition: 0.3s ease;
-      filter: brightness(0) invert(1); // por si algún logo tiene color oscuro
-  
+      filter: brightness(0) invert(1);
+
       &:hover {
         opacity: 1;
         transform: scale(1.05);
       }
     }
   }
-  
 
   .card-hero {
-    background: white;
+    background: $light;
     border-radius: 20px;
     padding: 1rem;
     display: inline-block;
+    box-shadow: $box-shadow-base;
 
     img {
       width: 100%;
       height: auto;
     }
   }
-}
-
-
-// === Hero section diagonal inferior ===
-.hero-section {
-  background-color: #0057ff;
-  color: white;
-  padding-top: 160px;
-  padding-bottom: 100px;
-  position: relative;
-  overflow: hidden;
 
   // --- diagonal ---
   &::after {
@@ -102,8 +98,442 @@
     left: 0;
     width: 100%;
     height: 120px;
-    background: #fff;
+    background: $light;
     clip-path: polygon(0 80%, 100% 0, 100% 100%, 0% 100%);
+    z-index: 0; // 
   }
 }
 
+// === Projects Section ===
+.projects-section {
+  background-color: $light;
+  padding-top: 8rem;
+  padding-bottom: 6rem;
+  position: relative;
+
+  .project-card {
+    position: relative;
+    z-index: 2;
+    border-radius: 12px;
+    box-shadow: $box-shadow-base;
+    transition: all 0.3s ease;
+
+    h6 {
+      font-weight: 600;
+      color: $dark;
+    }
+
+    li {
+      font-size: 0.95rem;
+      color: $dark;
+    }
+  }
+
+  .project-img {
+    position: absolute;
+    top: -40px;
+    right: 20px;
+    width: 280px;
+    border-radius: 16px;
+    box-shadow: $box-shadow-base;
+    z-index: 1;
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .badge-warning {
+    background-color: #ffcf4a;
+    color: $light;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+// === Features Section ===
+.features-section {
+  background-color: $light;
+  padding-top: 8rem;
+  padding-bottom: 6rem;
+  position: relative;
+
+  .badge-success {
+    background-color: #32d296;
+    color: $light;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    line-height: 1.4;
+  }
+
+  // --- Imagen y botón ---
+  .feature-media {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+
+    .feature-img {
+      width: 360px;
+      border-radius: 12px;
+      box-shadow: $box-shadow-base;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+
+    .btn-play {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 44px;
+      height: 44px;
+      background-color: $light;
+      color: $dark;
+      border: none;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+        background-color: lighten($light, 10%);
+      }
+    }
+  }
+}
+
+.features-section::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  width: 2px;
+  height: 80px;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0,
+    rgba(0, 0, 0, 0.1) 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  transform: translateX(-50%);
+}
+
+// === Download Section ===
+.download-section {
+  background-color: $light;
+  padding-top: 8rem;
+  padding-bottom: 14rem; // espacio extra para la card azul flotante
+  position: relative;
+
+  .badge-primary {
+    background-color: $primary;
+    color: $light;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: 1rem;
+    color: $gray-600;
+  }
+
+  // --- Imagen con botón de play ---
+  .download-media {
+    position: relative;
+    display: inline-block;
+
+    .download-img {
+      width: 360px;
+      border-radius: 12px;
+      box-shadow: $box-shadow-base;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+
+    .btn-play {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 44px;
+      height: 44px;
+      background-color: $light;
+      color: $dark;
+      border: none;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+        background-color: lighten($light, 10%);
+      }
+    }
+  }
+
+  // --- Botones de tiendas ---
+  .store-buttons {
+    .btn-store {
+      display: inline-block;
+      background: transparent;
+      border: none;
+      padding: 0;
+
+      img {
+        height: 42px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  // --- Card azul flotante ---
+  .infinite-card {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $dark;
+    border-radius: 16px 16px 0 0;
+    padding: 3rem 2rem;
+    width: 85%;
+    max-width: 900px;
+    box-shadow: $box-shadow-base;
+
+    h5 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1rem;
+      color: rgba($light, 0.85);
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .btn {
+      color: $dark !important;
+      font-weight: 600;
+      padding: 0.5rem 1.5rem;
+      border-radius: 30px;
+
+      &:hover {
+        background-color: lighten($light, 8%);
+      }
+    }
+  }
+}
+
+// === Awards Section ===
+.awards-section {
+  background-color: $gray-100;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+
+  .badge-info {
+    background-color: lighten($primary, 20%);
+    color: $light;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    line-height: 1.4;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+  }
+
+  .award-card {
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-6px);
+      border-color: rgba($primary, 0.2);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    img {
+      height: 32px;
+    }
+
+    h6 {
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+
+    p {
+      font-size: 0.85rem;
+      color: $gray-600;
+    }
+  }
+}
+
+// === FAQ Section ===
+.faq-section {
+  background-color: $light;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  .accordion {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+
+    .card {
+      border: 1px solid $gray-200;
+      border-radius: 6px;
+
+      .card-header {
+        background: $gray-100;
+        border-bottom: none;
+
+        .btn-link {
+          color: $dark;
+          font-weight: 600;
+          text-decoration: none;
+          width: 100%;
+          text-align: left;
+          padding: 1rem 1.25rem;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+
+      .card-body {
+        color: $gray-600;
+        padding: 1rem 1.5rem;
+      }
+    }
+  }
+}
+
+// ========================================================
+// FOOTER STYLES
+// ========================================================
+
+.footer-odoo {
+  position: relative;
+  background-color: $dark;
+  color: $light;
+  font-family: $font-family-base;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  z-index: 2; 
+  overflow: visible;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -120px;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    background: $dark;
+    clip-path: polygon(0 40%, 100% 0, 100% 100%, 0% 100%);
+    z-index: 1;  // figura del fondo
+    pointer-events: none;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2; // eleva el contenido sobre la diagonal
+  }
+
+
+  a {
+    color: $gray-300;
+    text-decoration: none;
+
+    &:hover {
+      color: $gray-600;
+    }
+  }
+
+  .btn-outline-light {
+    border-color: $light;
+    color: $light;
+
+    &:hover {
+      background-color: $gray-600;
+      color: $gray-600;
+    }
+  }
+
+  .social-icons a {
+    color: $light;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $gray-600;
+    }
+  }
+
+  h2 {
+    font-weight: $headings-font-weight;
+  }
+
+  h6 {
+    color: $light;
+  }
+
+  .opacity-10 {
+    opacity: 0.1;
+  }
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      margin-bottom: 0.75rem;
+      color: $gray-300;
+    }
+  }
+
+  hr {
+    border-color: $light;
+  }
+
+  .row > [class^="col-"] {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
