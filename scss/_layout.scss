@@ -111,124 +111,91 @@
   padding-bottom: 6rem;
   position: relative;
 
-  .project-card {
-    position: relative;
-    z-index: 2;
-    border-radius: 12px;
-    box-shadow: $box-shadow-base;
-    transition: all 0.3s ease;
+  .project-img-wrapper {
+    position: absolute;
+    top: -60px;   
+    left: 200px; 
+    z-index: 3;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  
+    .project-img {
+      width: 280px;  // 🔹 un poco más grande para la proporción del mockup
+      height: auto;
+      border-radius: 16px;
+      display: block;
+    }
+  
+    .play-btn {
+      position: absolute;
+      top: 12px;  
+      left: 12px;
+      background: rgba(255, 255, 255, 0.95);
+      border: none;
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease;
+  
+      &:hover {
+        background: #fff;
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+    .project-card {
+      position: relative;
+      z-index: 2;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      margin-top: 110px; // 🔹 ajustado para compensar la imagen superpuesta
+      padding-top: 3.5rem;
+      width: 85%;
+    }
 
     h6 {
       font-weight: 600;
-      color: $dark;
+      color: #1a1a1a;
     }
 
     li {
       font-size: 0.95rem;
-      color: $dark;
+      color: #1a1a1a;
+    }
+
+    .progress {
+      height: 4px;
+      background-color: #eee;
+      border-radius: 2px;
+      overflow: hidden;
+
+      .progress-bar {
+        background-color: #ffcf4a;
+      }
     }
   }
 
-  .project-img {
-    position: absolute;
-    top: -40px;
-    right: 20px;
-    width: 280px;
-    border-radius: 16px;
-    box-shadow: $box-shadow-base;
-    z-index: 1;
+  .badge-warning {
+    background-color: #ffcf4a;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 0.35rem 0.8rem;
   }
 
   h2 {
     font-size: 2rem;
     line-height: 1.3;
   }
-
-  .badge-warning {
-    background-color: #ffcf4a;
-    color: $light;
-    font-weight: 600;
-    border-radius: 20px;
-    padding: 0.4rem 0.8rem;
-  }
-}
-
-// === Features Section ===
-.features-section {
-  background-color: $light;
-  padding-top: 8rem;
-  padding-bottom: 6rem;
-  position: relative;
-
-  .badge-success {
-    background-color: #32d296;
-    color: $light;
-    font-weight: 600;
-    border-radius: 20px;
-    padding: 0.4rem 0.8rem;
-  }
-
-  h2 {
-    font-size: 1.75rem;
-    line-height: 1.4;
-  }
-
-  // --- Imagen y botón ---
-  .feature-media {
-    position: relative;
-    display: inline-block;
-    z-index: 1;
-
-    .feature-img {
-      width: 360px;
-      border-radius: 12px;
-      box-shadow: $box-shadow-base;
-      transition: transform 0.3s ease;
-
-      &:hover {
-        transform: scale(1.02);
-      }
-    }
-
-    .btn-play {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      width: 44px;
-      height: 44px;
-      background-color: $light;
-      color: $dark;
-      border: none;
-      border-radius: 50%;
-      font-size: 1.2rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      transition: all 0.3s ease;
-      cursor: pointer;
-
-      &:hover {
-        transform: scale(1.1);
-        background-color: lighten($light, 10%);
-      }
-    }
-  }
-}
-
-.features-section::before {
-  content: "";
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  width: 2px;
-  height: 80px;
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.1) 0,
-    rgba(0, 0, 0, 0.1) 4px,
-    transparent 4px,
-    transparent 8px
-  );
-  transform: translateX(-50%);
-}
 
 // === Download Section ===
 .download-section {
@@ -293,7 +260,7 @@
     }
   }
 
-  // --- Botones de tiendas ---
+  // --- buttons ---
   .store-buttons {
     .btn-store {
       display: inline-block;
@@ -311,93 +278,224 @@
       }
     }
   }
+}
+// ========================================================
+// INFINITE SOLUTIONS CARD
+// ========================================================
+.infinite-section {
+  background: transparent;
+  position: relative;
+  margin-top: 5rem;
+  margin-bottom: 6rem; // 🔹 separa de la sección "Awards"
+  display: flex;
+  justify-content: center;
+}
 
-  // --- Card azul flotante ---
   .infinite-card {
-    position: absolute;
-    bottom: -60px;
-    left: 50%;
-    transform: translateX(-50%);
     background-color: $dark;
-    border-radius: 16px 16px 0 0;
-    padding: 3rem 2rem;
-    width: 85%;
-    max-width: 900px;
-    box-shadow: $box-shadow-base;
+    color: $light;
+    border-radius: 0 64px 0 64px; // 🔹 forma más parecida al mockup
+    padding: 3rem 4rem;
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 2;
 
-    h5 {
-      font-size: 1.5rem;
-      font-weight: 700;
+    // --- bloque izquierdo
+    .infinite-text {
+      flex: 1;
+      max-width: 600px;
+
+      h5 {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: $light;
+        margin-bottom: 0.8rem;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: rgba($light, 0.8);
+        margin: 0;
+      }
     }
 
-    p {
-      font-size: 1rem;
-      color: rgba($light, 0.85);
-      max-width: 700px;
-      margin: 0 auto 1.5rem;
-    }
+    // --- bloque derecho (botón)
+    .infinite-action {
+      flex-shrink: 0;
+      margin-left: 2rem;
 
-    .btn {
-      color: $dark !important;
-      font-weight: 600;
-      padding: 0.5rem 1.5rem;
-      border-radius: 30px;
+      .btn {
+        background: $light;
+        color: $dark;
+        font-weight: 600;
+        border-radius: 8px;
+        padding: 0.75rem 1.8rem;
+        display: inline-flex;
+        align-items: center;
+        transition: all 0.3s ease;
 
-      &:hover {
-        background-color: lighten($light, 8%);
+        &::after {
+          content: "→";
+          display: inline-block;
+          margin-left: 0.5rem;
+          transition: transform 0.3s ease;
+        }
+
+        &:hover {
+          transform: translateY(-3px);
+          background: lighten($light, 5%);
+
+          &::after {
+            transform: translateX(4px);
+          }
+        }
       }
     }
   }
-}
 
-// === Awards Section ===
+  // === Responsive ===
+  @media (max-width: 991.98px) {
+    .infinite-card {
+      flex-direction: column;
+      text-align: center;
+      border-radius: 32px;
+      padding: 2.5rem 2rem;
+      gap: 1.5rem;
+
+      .infinite-action {
+        margin-left: 0;
+      }
+    }
+  }
+
+    h5 {
+      font-size: 1.4rem;
+    }
+
+    p {
+      margin: 1rem auto 1.5rem;
+    }
+
+    .btn {
+      margin-top: 1rem;
+    }
+  
+// ========================================================
+// AWARDS SECTION
+// ========================================================
 .awards-section {
-  background-color: $gray-100;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  background-color: #f9faff;
+  padding: 8rem 0;
+  position: relative;
 
-  .badge-info {
-    background-color: lighten($primary, 20%);
-    color: $light;
-    font-weight: 600;
-    border-radius: 20px;
-    padding: 0.4rem 0.8rem;
+  .awards-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    align-items: start;
+    gap: 3rem;
   }
 
-  h2 {
-    font-size: 1.75rem;
-    line-height: 1.4;
-    max-width: 700px;
-    margin: 0 auto 3rem;
+  // === Texto izquierda ===
+  .awards-text {
+    .badge-info {
+      background-color: $primary;
+      color: $light;
+      font-weight: 600;
+      font-size: 0.8rem;
+      border-radius: 20px;
+      padding: 0.4rem 1rem;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+
+    h6 {
+      color: $dark;
+      font-weight: 700;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin-top: 1rem;
+    }
   }
 
+  // === Grid de cards ===
+  .awards-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    justify-items: center;
+  }
+
+  // === Card individual ===
   .award-card {
+    background: $light;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
-    border: 1px solid transparent;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    width: 200px;
     cursor: pointer;
 
     &:hover {
       transform: translateY(-6px);
-      border-color: rgba($primary, 0.2);
-      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1);
     }
 
     img {
-      height: 32px;
+      height: 34px;
+      margin-bottom: 1rem;
     }
 
-    h6 {
-      font-size: 0.95rem;
-      margin-bottom: 0.25rem;
+    .stars {
+      color: #ffb400;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     p {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       color: $gray-600;
+      margin-bottom: 0.4rem;
+    }
+
+    a {
+      display: inline-block;
+      font-size: 0.85rem;
+      color: $dark;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid rgba($dark, 0.2);
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: $primary;
+        border-color: $primary;
+      }
+    }
+  }
+
+  // === Responsive ===
+  @media (max-width: 991.98px) {
+    .awards-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .awards-grid {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      justify-items: center;
     }
   }
 }
 
+
+  
 // === FAQ Section ===
 .faq-section {
   background-color: $light;
@@ -456,7 +554,7 @@
   overflow: visible;
   z-index: 2;
 
-  // --- Diagonal superior ---
+  // --- Diagonal ---
   &::before {
     content: "";
     position: absolute;
@@ -470,14 +568,14 @@
     pointer-events: none;
   }
 
-  // --- Contenedor principal ---
+// --- Content ---
   .container {
     position: relative;
     z-index: 2;
     max-width: 1200px;
   }
 
-  // --- Encabezado principal ---
+  // --- Header ---
   .footer-header {
     display: flex;
     flex-wrap: wrap;
@@ -519,12 +617,12 @@
         border-radius: 8px;
         padding: 0.6rem 1.5rem;
         transition: all 0.2s ease;
-      
+
         &:hover {
           background-color: $light;
           color: $dark;
         }
-      }      
+      }
 
       .btn-primary {
         background-color: $primary;
@@ -534,12 +632,12 @@
         border-radius: 8px;
         padding: 0.6rem 1.5rem;
         transition: background-color 0.2s ease, transform 0.1s ease;
-    
+
         &:hover {
           background-color: $primary-dark;
           transform: translateY(-1px);
         }
-    
+
         &:active {
           background-color: $primary-dark;
           transform: translateY(0);
@@ -553,7 +651,7 @@
     margin: 2rem 0;
   }
 
-  // --- Secciones inferiores ---
+// --- Sections---
   .footer-bottom {
     padding-top: 3rem;
 
@@ -610,8 +708,7 @@
       }
     }
   }
-
-  // --- Línea final ---
+  // --- Legal ---
   .footer-legal {
     border-top: 1px solid rgba($light, 0.1);
     margin-top: 3rem;
@@ -634,4 +731,4 @@
       }
     }
   }
-}
+} 

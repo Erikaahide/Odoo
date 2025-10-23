@@ -2,13 +2,13 @@
 // VARIABLES 
 // ========================================================
 
-$primary: #1a73e8;   // Azul Odoo
+$primary: #1a73e8; // Azul Odoo
 $primary-light: lighten($primary, 10%);
 $primary-dark: darken($primary, 10%);
-$dark: #0c1445;     // Azul oscuro texto
-$light: #ffffff;      // Blanco puro
+$dark: #0c1445; // Azul oscuro texto
+$light: #ffffff; // Blanco puro
 
-$font-family-base: "Open Sans", sans-serif;
+$font-family-base: 'Poppins', sans-serif;
 $font-size-base: 1rem;
 $headings-font-weight: 700;
 
@@ -30,4 +30,3 @@ $gray-200: #e9ecef;
 $gray-300: #dee2e6;
 $gray-600: #6c757d;
 $gray-800: #343a40;
-
