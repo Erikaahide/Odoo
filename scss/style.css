@@ -9540,18 +9540,25 @@ h2 {
   transform: scale(1.1);
   background-color: white;
 }
+.download-section .store-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
 .download-section .store-buttons .btn-store {
   display: inline-block;
-  background: transparent;
-  border: none;
-  padding: 0;
+  transition: transform 0.2s ease;
 }
-.download-section .store-buttons .btn-store img {
-  height: 42px;
-  transition: transform 0.3s ease;
+.download-section .store-buttons .btn-store:hover {
+  transform: translateY(-3px);
 }
-.download-section .store-buttons .btn-store img:hover {
-  transform: scale(1.05);
+.download-section .store-buttons .btn-store .store-img {
+  height: 50px;
+  width: auto;
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .infinite-section {
@@ -9621,18 +9628,6 @@ h2 {
   transform: translateX(4px);
 }
 
-@media (max-width: 991.98px) {
-  .infinite-card {
-    flex-direction: column;
-    text-align: center;
-    border-radius: 32px;
-    padding: 2.5rem 2rem;
-    gap: 1.5rem;
-  }
-  .infinite-card .infinite-action {
-    margin-left: 0;
-  }
-}
 h5 {
   font-size: 1.4rem;
 }
@@ -9720,52 +9715,138 @@ p {
   color: #1a73e8;
   border-color: #1a73e8;
 }
-@media (max-width: 991.98px) {
-  .awards-section .awards-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .awards-section .awards-grid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    justify-items: center;
-  }
-}
 
-.faq-section {
+.helpful-answers {
   background-color: #ffffff;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  text-align: center;
+  padding: 6rem 0;
+  margin-bottom: 10rem;
 }
-.faq-section h3 {
-  font-size: 1.75rem;
+.helpful-answers h2 {
+  color: #0c1445;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
 }
-.faq-section .accordion {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: left;
+.helpful-answers p {
+  color: rgba(12, 20, 69, 0.6);
+  font-size: 1.05rem;
+  margin-bottom: 3rem;
 }
-.faq-section .accordion .card {
-  border: 1px solid #e9ecef;
-  border-radius: 6px;
+.helpful-answers .accordion .card {
+  border: none;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(12, 20, 69, 0.05);
+  transition: box-shadow 0.3s ease;
 }
-.faq-section .accordion .card .card-header {
-  background: #f8f9fa;
-  border-bottom: none;
+.helpful-answers .accordion .card:hover {
+  box-shadow: 0 6px 24px rgba(12, 20, 69, 0.08);
 }
-.faq-section .accordion .card .card-header .btn-link {
+.helpful-answers .accordion .card .card-header {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.helpful-answers .accordion .card .card-header .btn-link {
   color: #0c1445;
   font-weight: 600;
+  font-size: 1rem;
   text-decoration: none;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   text-align: left;
-  padding: 1rem 1.25rem;
+  transition: color 0.3s ease;
 }
-.faq-section .accordion .card .card-header .btn-link:hover {
+.helpful-answers .accordion .card .card-header .btn-link:hover {
   color: #1a73e8;
 }
-.faq-section .accordion .card .card-body {
-  color: #6c757d;
-  padding: 1rem 1.5rem;
+.helpful-answers .accordion .card .card-header .btn-link:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.06);
+  background-color: rgba(26, 115, 232, 0.03);
+}
+.helpful-answers .accordion .card .card-header .btn-link .faq-title {
+  display: flex;
+  align-items: center;
+}
+.helpful-answers .accordion .card .card-header .btn-link .faq-title i {
+  color: #0c1445;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+.helpful-answers .accordion .card .card-header .btn-link .icon {
+  font-size: 1.3rem;
+  color: rgba(12, 20, 69, 0.5);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.helpful-answers .accordion .card .card-header .btn-link[aria-expanded=true] {
+  color: #1a73e8;
+}
+.helpful-answers .accordion .card .card-header .btn-link[aria-expanded=true] .faq-title i {
+  color: #1a73e8;
+}
+.helpful-answers .accordion .card .card-header .btn-link[aria-expanded=true] .icon {
+  transform: rotate(45deg);
+  color: #1a73e8;
+}
+.helpful-answers .accordion .card .card-body {
+  background-color: #ffffff;
+  color: rgba(12, 20, 69, 0.75);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: left;
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid rgba(12, 20, 69, 0.05);
+}
+.helpful-answers .accordion .card + .card {
+  margin-top: 1rem;
+}
+.helpful-answers .mt-5 {
+  margin-top: 4rem !important;
+}
+.helpful-answers .mt-5 p {
+  color: rgba(12, 20, 69, 0.6);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.helpful-answers .mt-5 .btn-primary {
+  background-color: #1a73e8;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.helpful-answers .mt-5 .btn-primary::after {
+  content: "→";
+  display: inline-block;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+.helpful-answers .mt-5 .btn-primary:hover {
+  background-color: rgb(21.2202380952, 103.3333333333, 211.2797619048);
+  transform: translateY(-3px);
+}
+.helpful-answers .mt-5 .btn-primary:hover::after {
+  transform: translateX(4px);
+}
+.helpful-answers .mt-5 .btn-light {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  color: #0c1445;
+  margin-left: 1rem;
+  transition: all 0.3s ease;
+}
+.helpful-answers .mt-5 .btn-light:hover {
+  background-color: rgba(12, 20, 69, 0.04);
 }
 
 .footer-odoo {
@@ -9817,11 +9898,6 @@ p {
   display: flex;
   gap: 0.75rem;
   margin-top: 1rem;
-}
-@media (min-width: 768px) {
-  .footer-odoo .footer-header .footer-actions {
-    margin-top: 0;
-  }
 }
 .footer-odoo .footer-header .footer-actions .btn {
   font-weight: 600;

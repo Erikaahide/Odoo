@@ -196,12 +196,12 @@
                             Get components and examples, including tons of variables that will help
                             you grow your business.
                         </p>
-                        <div class="store-buttons d-flex flex-wrap align-items-center gap-3">
+                        <div class="store-buttons mt-3">
                             <a href="#" class="btn-store">
-                                <img src="assets/appstore.svg" alt="App Store" class="store-img" />
+                                <img src="assets/appstore.png" alt="App Store" class="store-img" />
                             </a>
                             <a href="#" class="btn-store">
-                                <img src="assets/playstore.svg" alt="Play Store" class="store-img" />
+                                <img src="assets/playstore.png" alt="Play Store" class="store-img" />
                             </a>
                         </div>
                     </div>
@@ -288,77 +288,173 @@
         </section>
 
 
-        <!-- Helpful Answers Section -->
-        <section id="faq" class="faq-section py-5">
+        <section class="helpful-answers py-5">
             <div class="container text-center">
-                <h3 class="font-weight-bold text-dark mb-4">Helpful answers</h3>
+                <h2 class="mb-3">Helpful answers</h2>
                 <p class="text-muted mb-5">
                     Start building fast, beautiful and modern looking websites in no time.
                 </p>
 
-                <div class="accordion" id="accordionExample">
-                    <!-- Item 1 -->
-                    <div class="card mb-2">
-                        <div class="card-header" id="headingOne">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
-                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Which license do I need?
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-                                You can choose between Personal and Commercial licenses depending on your project
-                                needs.
+                <div class="row justify-content-center">
+                    <!-- Left -->
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <div id="accordionLeft" class="accordion">
+                            <!-- Item 1 -->
+                            <div class="card mb-3 shadow-sm">
+                                <div class="card-header" id="headingOneLeft">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link d-flex justify-content-between w-100"
+                                            data-toggle="collapse" data-target="#collapseOneLeft" aria-expanded="true"
+                                            aria-controls="collapseOneLeft">
+                                            <span class="faq-title">
+                                                <i class="far fa-file-alt mr-2"></i>
+                                                Which license do I need?
+                                            </span>
+                                            <span class="icon">+</span>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseOneLeft" class="collapse" aria-labelledby="headingOneLeft"
+                                    data-parent="#accordionLeft">
+                                    <div class="card-body text-left">
+                                        You can choose between personal or commercial licenses depending on your usage.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="card mb-3 shadow-sm">
+                                <div class="card-header" id="headingTwoLeft">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link d-flex justify-content-between w-100"
+                                            data-toggle="collapse" data-target="#collapseTwoLeft" aria-expanded="true"
+                                            aria-controls="collapseTwoLeft">
+                                            <span class="faq-title">
+                                                <i class="fas fa-lock mr-2"></i>
+                                                How do I get access to my database?
+                                            </span>
+                                            <span class="icon">+</span>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseTwoLeft" class="collapse" aria-labelledby="headingTwoLeft"
+                                    data-parent="#accordionLeft">
+                                    <div class="card-body text-left">
+                                        You can access your database via the dashboard under the “Data” tab.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="card mb-3 shadow-sm">
+                                <div class="card-header" id="headingThreeLeft">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link d-flex justify-content-between w-100"
+                                            data-toggle="collapse" data-target="#collapseThreeLeft" aria-expanded="true"
+                                            aria-controls="collapseThreeLeft">
+                                            <span class="faq-title">
+                                                <i class="far fa-file-alt mr-2"></i>
+                                                How do I see previous orders?
+                                            </span>
+                                            <span class="icon">+</span>
+                                        </button>
+
+                                    </h5>
+                                </div>
+                                <div id="collapseThreeLeft" class="collapse" aria-labelledby="headingThreeLeft"
+                                    data-parent="#accordionLeft">
+                                    <div class="card-body text-left">
+                                        Go to your account dashboard and click on “Order history”.
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Item 2 -->
-                    <div class="card mb-2">
-                        <div class="card-header" id="headingTwo">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left collapsed" type="button"
-                                    data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
-                                    aria-controls="collapseTwo">
-                                    How do I get access to my database?
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-                                After installation, you can access your database using the credentials provided in
-                                your
-                                admin panel.
+                    <!-- Right -->
+                    <div class="col-md-6">
+                        <div id="accordionRight" class="accordion">
+                            <!-- Item 4 -->
+                            <div class="card mb-3 shadow-sm">
+                                <div class="card-header" id="headingOneRight">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link d-flex justify-content-between w-100"
+                                            data-toggle="collapse" data-target="#collapseOneRight" aria-expanded="true"
+                                            aria-controls="collapseOneRight">
+                                            <span class="faq-title">
+                                                <i class="far fa-file-alt mr-2"></i>
+                                                Which license do I need?
+                                            </span>
+                                            <span class="icon">+</span>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseOneRight" class="collapse" aria-labelledby="headingOneRight"
+                                    data-parent="#accordionRight">
+                                    <div class="card-body text-left">
+                                        You can choose between personal or commercial licenses depending on your usage.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 5 -->
+                            <div class="card mb-3 shadow-sm">
+                                <div class="card-header" id="headingTwoLeft">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link d-flex justify-content-between w-100"
+                                            data-toggle="collapse" data-target="#collapseTwoRight" aria-expanded="true"
+                                            aria-controls="collapseTwoRight">
+                                            <span class="faq-title">
+                                                <i class="fas fa-lock mr-2"></i>
+                                                How do I get access to my database?
+                                            </span>
+                                            <span class="icon">+</span>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseTwoRight" class="collapse" aria-labelledby="headingTwoRight"
+                                    data-parent="#accordionRight">
+                                    <div class="card-body text-left">
+                                        You can access your database via the dashboard under the “Data” tab.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 6 -->
+                            <div class="card mb-3 shadow-sm">
+                                <div class="card-header" id="headingThreeRight">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link d-flex justify-content-between w-100"
+                                            data-toggle="collapse" data-target="#collapseThreeRight"
+                                            aria-expanded="true" aria-controls="collapseThreeRight">
+                                            <span class="faq-title">
+                                                <i class="far fa-file-alt mr-2"></i>
+                                                How do I see previous orders?
+                                            </span>
+                                            <span class="icon">+</span>
+                                        </button>
+
+                                    </h5>
+                                </div>
+                                <div id="collapseThreeRight" class="collapse" aria-labelledby="headingThreeRight"
+                                    data-parent="#accordionRight">
+                                    <div class="card-body text-left">
+                                        Go to your account dashboard and click on “Order history”.
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Item 3 -->
-                    <div class="card mb-2">
-                        <div class="card-header" id="headingThree">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left collapsed" type="button"
-                                    data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
-                                    aria-controls="collapseThree">
-                                    How do I see previous orders?
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-                                You can see all your previous orders in the “Orders” tab within your account
-                                dashboard.
-                            </div>
-                        </div>
+                    <!-- Buttons -->
+                    <div class="mt-5">
+                        <p>I want to start a new project.</p>
+                        <a href="#" class="btn btn-primary btn-lg">Buy now</a>
+                        <a href="#" class="btn btn-light">Learn more</a>
                     </div>
                 </div>
-            </div>
         </section>
+
 
         <!--Footer -->
         <footer class="footer-odoo py-5 mt-5">

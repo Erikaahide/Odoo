@@ -203,9 +203,9 @@ h2 {
   color: $dark;
   padding: 6rem 0;
 
-  // --- Badge (verde "Features") ---
+  // --- Badge "Features" ---
   .badge-success {
-    background-color: #3cb878; // verde Odoo mockup
+    background-color: #3cb878;
     color: #fff;
     font-size: 0.8rem;
     font-weight: 600;
@@ -233,7 +233,7 @@ h2 {
 
     &::before {
       content: "\f14a";
-      font-family: "Font Awesome 5 Free"; // solo para el ícono
+      font-family: "Font Awesome 5 Free";
       font-weight: 900;
       font-size: 1.1rem;
       color: #6bc4a3;
@@ -242,7 +242,7 @@ h2 {
   }
 
 
-  // --- Imagen ---
+  // --- Image ---
   .feature-media {
     position: relative;
 
@@ -256,7 +256,7 @@ h2 {
       }
     }
 
-    // --- Botón Play ---
+    // --- Button Play ---
     .btn-play {
       position: absolute;
       top: 12px;
@@ -350,25 +350,32 @@ h2 {
     }
   }
 
-  // --- buttons ---
+  // === Store Buttons ===
   .store-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+    flex-wrap: wrap;
+    margin-top: 1rem;
+
     .btn-store {
       display: inline-block;
-      background: transparent;
-      border: none;
-      padding: 0;
+      transition: transform 0.2s ease;
 
-      img {
-        height: 42px;
-        transition: transform 0.3s ease;
+      &:hover {
+        transform: translateY(-3px);
+      }
 
-        &:hover {
-          transform: scale(1.05);
-        }
+      .store-img {
+        height: 50px; // ajusta según tu mockup
+        width: auto;
+        border-radius: 8px;
+        box-shadow: $box-shadow-base;
       }
     }
   }
 }
+
 
 // === Infinite card ===
 .infinite-section {
@@ -394,7 +401,7 @@ h2 {
   position: relative;
   z-index: 2;
 
-  // --- bloque izquierdo
+  // --- Left
   .infinite-text {
     flex: 1;
     max-width: 600px;
@@ -414,7 +421,7 @@ h2 {
     }
   }
 
-  // --- bloque derecho (botón)
+  // --- Right (button)
   .infinite-action {
     flex-shrink: 0;
     margin-left: 2rem;
@@ -448,20 +455,6 @@ h2 {
   }
 }
 
-@media (max-width: 991.98px) {
-  .infinite-card {
-    flex-direction: column;
-    text-align: center;
-    border-radius: 32px;
-    padding: 2.5rem 2rem;
-    gap: 1.5rem;
-
-    .infinite-action {
-      margin-left: 0;
-    }
-  }
-}
-
 h5 {
   font-size: 1.4rem;
 }
@@ -487,7 +480,7 @@ p {
     gap: 3rem;
   }
 
-  // === Texto izquierda ===
+  // === Left Text ===
   .awards-text {
     .badge-info {
       background-color: $primary;
@@ -509,7 +502,7 @@ p {
     }
   }
 
-  // === Grid de cards ===
+  // === Grid cards ===
   .awards-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -517,7 +510,7 @@ p {
     justify-items: center;
   }
 
-  // === Card individual ===
+  // === Card ===
   .award-card {
     background: $light;
     border-radius: 16px;
@@ -566,63 +559,172 @@ p {
     }
   }
 
-  // === Responsive ===
-  @media (max-width: 991.98px) {
-    .awards-container {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
 
-    .awards-grid {
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      justify-items: center;
-    }
-  }
 }
 
-// === FAQ Section ===
-.faq-section {
+/// === FAQ Section ===
+.helpful-answers {
   background-color: $light;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  text-align: center;
+  padding: 6rem 0;
 
-  h3 {
-    font-size: 1.75rem;
+  h2 {
+    color: $dark;
+    font-weight: $headings-font-weight;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    color: rgba($dark, 0.6);
+    font-size: 1.05rem;
+    margin-bottom: 3rem;
   }
 
   .accordion {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-
     .card {
-      border: 1px solid $gray-200;
-      border-radius: 6px;
+      border: none;
+      border-radius: 12px;
+      background-color: $light;
+      box-shadow: 0 4px 20px rgba($dark, 0.05);
+      transition: box-shadow 0.3s ease;
+
+      &:hover {
+        box-shadow: 0 6px 24px rgba($dark, 0.08);
+      }
 
       .card-header {
-        background: $gray-100;
-        border-bottom: none;
+        background: transparent;
+        border: none;
+        padding: 0;
 
         .btn-link {
           color: $dark;
           font-weight: 600;
+          font-size: 1rem;
           text-decoration: none;
+          padding: 1.25rem 1.5rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
           width: 100%;
           text-align: left;
-          padding: 1rem 1.25rem;
+          transition: color 0.3s ease;
 
           &:hover {
             color: $primary;
+          }
+
+          &:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba($primary, 0.06);
+            background-color: rgba($primary, 0.03);
+          }
+
+          // Text n icon (FontAwesome)
+          .faq-title {
+            display: flex;
+            align-items: center;
+
+            i {
+              color: $dark;
+              font-size: 1rem;
+              margin-right: 0.5rem;
+            }
+          }
+
+          // Icon "+"
+          .icon {
+            font-size: 1.3rem;
+            color: rgba($dark, 0.5);
+            transition: transform 0.3s ease, color 0.3s ease;
+          }
+
+          &[aria-expanded="true"] {
+            color: $primary;
+
+            .faq-title i {
+              color: $primary;
+            }
+
+            .icon {
+              transform: rotate(45deg);
+              color: $primary;
+            }
           }
         }
       }
 
       .card-body {
-        color: $gray-600;
-        padding: 1rem 1.5rem;
+        background-color: $light;
+        color: rgba($dark, 0.75);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        text-align: left;
+        padding: 1.25rem 1.5rem;
+        border-top: 1px solid rgba($dark, 0.05);
+      }
+    }
+
+    .card+.card {
+      margin-top: 1rem;
+    }
+  }
+
+  // === Buttons ===
+  .mt-5 {
+    margin-top: 4rem !important;
+
+    p {
+      color: rgba($dark, 0.6);
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .btn-primary {
+      background-color: $primary;
+      color: $light;
+      border: none;
+      border-radius: 8px;
+      padding: 0.75rem 2rem;
+      font-weight: 400;
+      display: inline-flex;
+      align-items: center;
+      transition: all 0.3s ease;
+
+      &::after {
+        content: "→";
+        display: inline-block;
+        margin-left: 0.5rem;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        background-color: darken($primary, 5%);
+        transform: translateY(-3px);
+
+        &::after {
+          transform: translateX(4px);
+        }
+      }
+    }
+
+
+    .btn-light {
+      background-color: $light;
+      border-radius: 8px;
+      padding: 0.75rem 2rem;
+      font-weight: 600;
+      color: $dark;
+      margin-left: 1rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: rgba($dark, 0.04);
       }
     }
   }
+
+  margin-bottom: 10rem;
 }
 
 // === Footer ===
@@ -682,10 +784,6 @@ p {
       display: flex;
       gap: 0.75rem;
       margin-top: 1rem;
-
-      @media (min-width: 768px) {
-        margin-top: 0;
-      }
 
       .btn {
         font-weight: 600;
