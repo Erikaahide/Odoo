@@ -1,0 +1,15 @@
+@mixin soft-shadow {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+@mixin gradient-bg($gradient) {
+  background: $gradient;
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

@@ -1,30 +1,50 @@
 // ========================================================
-// VARIABLES 
+// Palette
 // ========================================================
 
-$primary: #1a73e8;
-$primary-light: lighten($primary, 10%);
-$primary-dark: darken($primary, 10%);
+$primary: #64bded;
+$primary-light: lighten($primary, 15%);
+$primary-dark: darken($primary, 15%);
+
+$secondary: #e91e63; // Rosado acento
+$accent: #00c6ff; // Azul brillante para degradados
+
 $dark: #0c1445;
 $light: #ffffff;
-$success: #3cb878;
-$warning: #ffcf4a;
 
+$success: #3a86c0;
+$warning: #1e5aa8;
+$error: #ff5e57;
 
-$font-family-base: 'Poppins', sans-serif;
-$font-size-base: 1rem;
-$headings-font-weight: 700;
-
-// --- Navbar ---
-$navbar-light-color: rgba(0, 0, 0, 0.8);
-$navbar-light-hover-color: $primary;
-$navbar-light-active-color: $primary;
-
-// --- Shadow---
-$box-shadow-base: 0 20px 40px rgba(0, 0, 0, 0.1);
-
+// --- Neutrales ---
 $gray-100: #f8f9fa;
 $gray-200: #e9ecef;
 $gray-300: #dee2e6;
 $gray-600: #6c757d;
 $gray-800: #343a40;
+
+// ========================================================
+// tipography
+// ========================================================
+$font-family-base: 'Poppins', sans-serif;
+$font-size-base: 1rem;
+$headings-font-weight: 700;
+
+// ========================================================
+// dark-mode
+// ========================================================
+$primary-dark-bg: #121212;
+$primary-dark-text: #eaeaea;
+
+// ========================================================
+// shadow n effects
+// ========================================================
+$box-shadow-base: 0 10px 30px rgba(0, 0, 0, 0.12);
+$box-shadow-soft: 0 6px 20px rgba(0, 0, 0, 0.08);
+
+// ========================================================
+// gradients
+// ========================================================
+$gradient-primary: linear-gradient(135deg, $primary 0%, $accent 100%);
+$gradient-hero: linear-gradient(to right, #1a73e8, #00c6ff);
+$gradient-button-hover: linear-gradient(90deg, #1a73e8 0%, #00c6ff 100%);
