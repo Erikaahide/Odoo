@@ -19,6 +19,7 @@
   background-color: $primary;
   color: $light;
   border: none;
+  margin: 3px;
 
   &:hover {
     background-color: darken($primary, 5%);
@@ -55,7 +56,6 @@
   &::after {
     content: "→";
     display: inline-block;
-    margin-left: 0.4rem;
     transition: transform 0.3s ease;
   }
 
@@ -196,6 +196,7 @@
   .card {
     border: none;
     border-radius: 12px;
+    background-color: $light;
     box-shadow: 0 4px 20px rgba($dark, 0.05);
     transition: box-shadow 0.3s ease;
 
@@ -208,29 +209,58 @@
     background: transparent;
     border: none;
     padding: 0;
+  }
 
-    .btn-link {
-      color: $dark;
-      font-weight: 600;
-      font-size: 1rem;
-      text-decoration: none;
-      padding: 1.25rem 1.5rem;
+  .btn-link {
+    color: $dark;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $primary;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($primary, 0.06);
+      background-color: rgba($primary, 0.03);
+    }
+
+    .faq-title {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      text-align: left;
 
-      &:hover {
+      i {
+        color: $dark;
+        font-size: 1rem;
+        margin-right: 0.5rem;
+      }
+    }
+
+    .icon {
+      font-size: 1.3rem;
+      color: rgba($dark, 0.5);
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    &[aria-expanded="true"] {
+      color: $dark;
+
+      .faq-title i {
         color: $primary;
       }
 
-      &[aria-expanded="true"] {
+      .icon {
+        transform: rotate(45deg);
         color: $primary;
-
-        .icon {
-          transform: rotate(45deg);
-          color: $primary;
-        }
       }
     }
   }
@@ -240,7 +270,21 @@
     color: rgba($dark, 0.75);
     font-size: 0.95rem;
     line-height: 1.6;
+    text-align: left;
     padding: 1.25rem 1.5rem;
+    border-top: 1px solid rgba($dark, 0.05);
+  }
+
+  h2 {
+    color: $dark;
+    font-weight: $headings-font-weight;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    color: rgba($dark, 0.6);
+    margin-bottom: 1rem;
+    font-size: 1rem;
   }
 }
 
@@ -266,4 +310,37 @@
   }
 }
 
-  
+// === Dashed curves ===
+.section-with-line {
+  position: relative;
+  height: 180px;
+  margin-bottom: -60px;
+  z-index: 1;
+}
+
+.section-with-line .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.dashed-curve {
+  width: 100%;
+  max-width: 1140px;
+  height: auto;
+  pointer-events: none;
+  animation: draw 2s ease-in-out;
+  stroke-dasharray: 6, 6;
+  stroke-dashoffset: 300;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 300;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}

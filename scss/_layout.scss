@@ -58,7 +58,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1.25rem;
+    gap: 1.5rem;
 
     .logo {
       height: 22px;
@@ -235,7 +235,7 @@
       text-decoration: none;
     }
   }
-} 
+}
 
 // Projects
 .projects-section {
@@ -378,10 +378,10 @@
       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
     }
 
-    // Control image proportion
+    // Control image size
     .tech-img {
       width: 100%;
-      height: 260px; // Ajusta según tu diseño
+      height: 260px;
       object-fit: cover;
       object-position: center;
       border-radius: 12px 12px 0 0;
@@ -394,7 +394,7 @@
 .tech-img-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 75%; // relación 4:3
+  padding-top: 75%; // 4:3
   overflow: hidden;
   border-radius: 12px 12px 0 0;
 
@@ -436,7 +436,7 @@
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid $light;
-    margin-left: -10px; // superposición suave
+    margin-left: -10px; // superposition
     transition: all 0.2s ease;
 
     &:first-child {
@@ -569,7 +569,7 @@
       margin-top: 1rem;
     }
   }
-
+  
   .awards-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -586,12 +586,6 @@
     img {
       height: 34px;
       margin-bottom: 1rem;
-    }
-
-    .stars {
-      color: #ffb400;
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
     }
 
     p {
@@ -623,116 +617,6 @@
   text-align: center;
   padding: 6rem 0;
   margin-bottom: 10rem;
-
-  h2 {
-    color: $dark;
-    font-weight: $headings-font-weight;
-    margin-bottom: 0.75rem;
-  }
-
-  p {
-    color: rgba($dark, 0.6);
-    font-size: 1.05rem;
-    margin-bottom: 3rem;
-  }
-
-  .accordion {
-    .card {
-      border: none;
-      border-radius: 12px;
-      background-color: $light;
-      box-shadow: 0 4px 20px rgba($dark, 0.05);
-      transition: box-shadow 0.3s ease;
-
-      &:hover {
-        box-shadow: 0 6px 24px rgba($dark, 0.08);
-      }
-    }
-
-    .card-header {
-      background: transparent;
-      border: none;
-      padding: 0;
-    }
-
-    .btn-link {
-      color: $dark;
-      font-weight: 600;
-      font-size: 1rem;
-      text-decoration: none;
-      padding: 1.25rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      text-align: left;
-      transition: color 0.3s ease;
-
-      &:hover {
-        color: $primary;
-      }
-
-      &:focus {
-        outline: none;
-        box-shadow: 0 0 0 3px rgba($primary, 0.06);
-        background-color: rgba($primary, 0.03);
-      }
-
-      .faq-title {
-        display: flex;
-        align-items: center;
-
-        i {
-          color: $dark;
-          font-size: 1rem;
-          margin-right: 0.5rem;
-        }
-      }
-
-      .icon {
-        font-size: 1.3rem;
-        color: rgba($dark, 0.5);
-        transition: transform 0.3s ease, color 0.3s ease;
-      }
-
-      &[aria-expanded="true"] {
-        color: $primary;
-
-        .faq-title i {
-          color: $primary;
-        }
-
-        .icon {
-          transform: rotate(45deg);
-          color: $primary;
-        }
-      }
-    }
-
-    .card-body {
-      background-color: $light;
-      color: rgba($dark, 0.75);
-      font-size: 0.95rem;
-      line-height: 1.6;
-      text-align: left;
-      padding: 1.25rem 1.5rem;
-      border-top: 1px solid rgba($dark, 0.05);
-    }
-
-    .card+.card {
-      margin-top: 1rem;
-    }
-  }
-
-  .mt-5 {
-    margin-top: 4rem !important;
-
-    p {
-      color: rgba($dark, 0.6);
-      margin-bottom: 1rem;
-      font-size: 1rem;
-    }
-  }
 }
 
 // Footer
