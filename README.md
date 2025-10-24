@@ -9,7 +9,8 @@
 This project is a **web mockup** built with **Bootstrap 4.6**, **SCSS**, and a focus on **desktop viewports (≥992px)**.  
 It was created as part of a **technical interview assessment** to demonstrate skills in modern layout development, SCSS variable management, and project organization best practices.
 
-**[GitHubPages Odoo](https://erikaahide.github.io/Odoo/)**  
+**[GitHubPages Odoo](https://erikaahide.github.io/Odoo/)**    
+---
 **[GitHubPages Portfolio](https://erikaahide.github.io/FrontendPortfolio/)**
 ---
 
@@ -20,7 +21,6 @@ It was created as part of a **technical interview assessment** to demonstrate sk
 - **SCSS (Sassy CSS)** – variables, nesting, partials  
 - **Vanilla JavaScript** – minimal interactivity  
 - **Git / GitHub** – version control  
-
 ---
 
 ## Project Structure
@@ -39,17 +39,23 @@ odoo-mockup/
 │   └── style.css         # Compiled CSS output
 │
 ├── /assets               # Images
-├── /js
-│   └── main.js           # Scripts
 ├── package.json
 ├── .gitignore
 ├── LICENSE
 └── README.md
 ```
+
+# Improvements
+
+The mock-up presents a clean and modern layout with a strong hero section. However, I would refine the grid alignment in the cards section to ensure consistent spacing and a fully responsive layout, to create a more balanced and polished look.
+
+I’d also experiment with a slightly more harmonious color palette, a Dark Mode toggle for better accessibility and visual comfort, and include a Language switcher to adapt the UI for bilingual users.
+
+These changes would elevate the interface, more **interactive, dynamic, inclusive and user-centered experience**.
+
 ---
 ## Mockup preview
-![Mockup preview](./assets/mock-up.jpg)
-
+![Mockup preview](./assets/mock-up.jpg)  
 ---
 Erika Ahide   
 Full Stack Developer & UX/UI Designer   
