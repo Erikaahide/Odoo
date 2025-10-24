@@ -12,7 +12,7 @@ It was created as part of a **technical interview assessment** to demonstrate sk
 **[GitHubPages Odoo](https://erikaahide.github.io/Odoo/)**    
 ---
 **[GitHubPages Portfolio](https://erikaahide.github.io/FrontendPortfolio/)**
----
+
 
 ## Tech Stack
 
@@ -21,7 +21,7 @@ It was created as part of a **technical interview assessment** to demonstrate sk
 - **SCSS (Sassy CSS)** – variables, nesting, partials  
 - **Vanilla JavaScript** – minimal interactivity  
 - **Git / GitHub** – version control  
----
+
 
 ## Project Structure
 
@@ -45,7 +45,7 @@ odoo-mockup/
 └── README.md
 ```
 
-# Improvements
+## Improvements
 
 The mock-up presents a clean and modern layout with a strong hero section. However, I would refine the grid alignment in the cards section to ensure consistent spacing and a fully responsive layout, to create a more balanced and polished look.
 
@@ -53,7 +53,7 @@ I’d also experiment with a slightly more harmonious color palette, a Dark Mode
 
 These changes would elevate the interface, more **interactive, dynamic, inclusive and user-centered experience**.
 
----
+
 ## Mockup preview
 ![Mockup preview](./assets/mock-up.jpg)  
 ---
