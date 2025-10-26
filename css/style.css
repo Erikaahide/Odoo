@@ -9332,7 +9332,7 @@ a.text-dark:hover, a.text-dark:focus {
   justify-content: center;
   font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
   transition: all 0.3s ease;
 }
 .btn-play:hover, .btn-play-right:hover {
@@ -9405,7 +9405,7 @@ a.text-dark:hover, a.text-dark:focus {
 .project-card:hover,
 .award-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 .infinite-card {
@@ -9418,7 +9418,7 @@ a.text-dark:hover, a.text-dark:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 .infinite-card .infinite-text {
   flex: 1;
@@ -9796,7 +9796,7 @@ a.text-dark:hover, a.text-dark:focus {
   z-index: 3;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 .projects-section .project-img-wrapper .project-img {
   width: 280px;
