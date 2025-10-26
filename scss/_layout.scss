@@ -4,9 +4,9 @@
 
 // Navbar
 .hero-nav {
-  background-color: rgba($primary, 0.15); 
-  backdrop-filter: blur(12px); 
-  -webkit-backdrop-filter: blur(12px); 
+  background-color: rgba($primary, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba($light, 0.1);
   transition: background-color 0.3s ease;
 
@@ -20,7 +20,7 @@
     font-size: 1.3rem;
 
     &:hover {
-      color: $primary-light !important; 
+      color: $primary-light !important;
     }
   }
 
@@ -30,7 +30,7 @@
     margin-right: 1rem;
 
     &:hover {
-      color: $primary-light !important; 
+      color: $primary-light !important;
     }
   }
 
@@ -50,10 +50,10 @@
 }
 
 
-  .btn-light {
-    color: $dark !important;
-    font-weight: 600;
-  }
+.btn-light {
+  color: $dark !important;
+  font-weight: 600;
+}
 
 // Hero
 .hero-section {
@@ -162,29 +162,29 @@
         font-weight: 600;
       }
     }
-    
-      .card-info {
-        position: relative;
-        z-index: 2;
-        font-size: 0.75rem;
-  
-        .label {
-          display: block;
-          font-size: 0.70rem;
-          opacity: 0.7;
-          font-weight: 500;
-          letter-spacing: 0.4px;
-          margin-bottom: 0.2rem;
-        }
-  
-        strong {
-          display: block;
-          font-weight: 200;
-          color: $light;
-          margin-top: 0.15rem;
-        }
+
+    .card-info {
+      position: relative;
+      z-index: 2;
+      font-size: 0.75rem;
+
+      .label {
+        display: block;
+        font-size: 0.70rem;
+        opacity: 0.7;
+        font-weight: 500;
+        letter-spacing: 0.4px;
+        margin-bottom: 0.2rem;
+      }
+
+      strong {
+        display: block;
+        font-weight: 200;
+        color: $light;
+        margin-top: 0.15rem;
       }
     }
+  }
 
   // Transactions
   .transaction {
@@ -374,9 +374,9 @@
     gap: 1.75rem;
   }
 
-  // Ajustes de alineación para crear el efecto "desfasado"
+  // messy effects
   .right-column {
-    margin-top: -2rem; // sube ligeramente las cards derechas
+    margin-top: -2rem;
   }
 
   // === BASE CARD ===
@@ -402,11 +402,11 @@
       object-fit: cover;
       object-position: center;
       display: block;
-      margin: 0;        // elimina margen vertical
-      padding: 0;       // elimina padding interno
+      margin: 0; // delete vertical padding
+      padding: 0; // delete intern padding
     }
 
-    
+
     .tech-card-body {
       background: #fff;
       border-top: 1px solid rgba($dark, 0.05);
@@ -426,7 +426,7 @@
     padding: 0; // delete global padding
     overflow: hidden; // avoid image overflow
   }
-  
+
 
   // === RATING CARD (Airbnb) ===
   .rating-card {
@@ -482,8 +482,14 @@
         margin-left: -10px;
         transition: all 0.2s ease;
 
-        &:first-child { margin-left: 0; }
-        &:hover { transform: translateY(-3px); z-index: 2; }
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:hover {
+          transform: translateY(-3px);
+          z-index: 2;
+        }
       }
     }
 
@@ -622,7 +628,7 @@
       margin-top: 1rem;
     }
   }
-  
+
   .awards-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -639,9 +645,8 @@
     img {
       height: 34px;
       margin-bottom: 1rem;
-     filter: brightness(0) saturate(100%) invert(12%) sepia(90%)
-          saturate(4673%) hue-rotate(217deg) brightness(93%) contrast(101%);
-      }
+      filter: brightness(0) saturate(100%) invert(12%) sepia(90%) saturate(4673%) hue-rotate(217deg) brightness(93%) contrast(101%);
+    }
 
     p {
       font-size: 0.9rem;
@@ -697,7 +702,7 @@
     z-index: 1;
     pointer-events: none;
   }
-  
+
   .container {
     position: relative;
     z-index: 2;
