@@ -9602,13 +9602,16 @@ a.text-dark:hover, a.text-dark:focus {
   font-weight: 700;
   font-size: 1.3rem;
 }
+.hero-nav .navbar-brand:hover {
+  color: rgb(168.5404624277, 218.1849710983, 244.9595375723) !important;
+}
 .hero-nav .nav-link {
   color: rgba(255, 255, 255, 0.9) !important;
   font-weight: 500;
   margin-right: 1rem;
 }
 .hero-nav .nav-link:hover {
-  color: #ffffff !important;
+  color: rgb(168.5404624277, 218.1849710983, 244.9595375723) !important;
 }
 .hero-nav .btn-signin {
   background: transparent;
@@ -9616,7 +9619,7 @@ a.text-dark:hover, a.text-dark:focus {
   font-weight: 500;
 }
 .hero-nav .btn-signin:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: #64bded;
 }
 .hero-nav .btn-gradient {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
@@ -9687,7 +9690,6 @@ a.text-dark:hover, a.text-dark:focus {
   filter: none !important;
   opacity: 1 !important;
   margin-bottom: 1.5rem;
-  opacity: 0.25;
 }
 .hero-section .credit-card .brand-logo {
   width: 42px;
@@ -9882,102 +9884,132 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .section-technologies {
-  padding: 5rem 0;
+  background-color: #fff;
+  padding: 6rem 0;
 }
-.section-technologies .cards-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1.75rem;
+.section-technologies .cards-layout {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
 }
-@media (max-width: 992px) {
-  .section-technologies .cards-grid {
-    grid-template-columns: 1fr;
-  }
+.section-technologies .left-column,
+.section-technologies .right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+.section-technologies .right-column {
+  margin-top: -2rem;
 }
 .section-technologies .tech-card {
   background: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(12, 20, 69, 0.05);
-  overflow: hidden;
-  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
 }
 .section-technologies .tech-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
 }
-.section-technologies .tech-card .tech-img {
+.section-technologies .profile-card img {
   width: 100%;
-  height: 260px;
+  height: auto;
+  border-radius: 16px 16px 0 0;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  border-radius: 12px 12px 0 0;
   display: block;
+  margin: 0;
+  padding: 0;
 }
-
-.tech-img-wrapper {
-  position: relative;
-  width: 100%;
-  padding-top: 75%;
+.section-technologies .profile-card .tech-card-body {
+  background: #fff;
+  border-top: 1px solid rgba(12, 20, 69, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+}
+.section-technologies .profile-card i {
+  color: rgba(12, 20, 69, 0.3);
+  font-size: 1.1rem;
+}
+.section-technologies .tech-card.profile-card {
+  padding: 0;
   overflow: hidden;
-  border-radius: 12px 12px 0 0;
 }
-.tech-img-wrapper img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+.section-technologies .rating-card {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
 }
-
-.tech-icon {
+.section-technologies .rating-card img {
+  height: 38px;
+  margin-bottom: 1rem;
+}
+.section-technologies .rating-card i {
+  font-size: 1rem;
+  margin: 0 2px;
+}
+.section-technologies .kit-card {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+}
+.section-technologies .kit-card .tech-icon {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  display: block;
-  margin: 0 auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  margin-bottom: 1.25rem;
+  transition: transform 0.3s ease;
 }
-.tech-icon:hover {
+.section-technologies .kit-card .tech-icon:hover {
   transform: translateY(-3px);
 }
-
-.tech-avatars {
-  position: relative;
-  display: inline-flex;
+.section-technologies .kit-card h6 {
+  font-weight: 700;
+  color: #0c1445;
+  margin-bottom: 1rem;
 }
-.tech-avatars .avatar-img {
+.section-technologies .kit-card .tech-avatars {
+  display: inline-flex;
+  margin-top: 0.5rem;
+}
+.section-technologies .kit-card .tech-avatars .avatar-img {
   width: 36px;
   height: 36px;
   border-radius: 50%;
+  border: 2px solid #fff;
   -o-object-fit: cover;
      object-fit: cover;
-  border: 2px solid #ffffff;
   margin-left: -10px;
   transition: all 0.2s ease;
 }
-.tech-avatars .avatar-img:first-child {
+.section-technologies .kit-card .tech-avatars .avatar-img:first-child {
   margin-left: 0;
 }
-.tech-avatars .avatar-img:hover {
+.section-technologies .kit-card .tech-avatars .avatar-img:hover {
   transform: translateY(-3px);
   z-index: 2;
 }
-
-.tech-actions i {
-  font-size: 0.95rem;
+.section-technologies .kit-card .tech-actions {
+  margin-top: 1rem;
   color: #6c757d;
+}
+.section-technologies .kit-card .tech-actions i {
+  font-size: 0.95rem;
+  margin: 0 6px;
   transition: color 0.2s ease;
+}
+.section-technologies .kit-card .tech-actions i:hover {
+  color: #64bded;
+}
+.section-technologies .info-card {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 1.25rem;
 }
 
 .download-section {
@@ -10035,7 +10067,6 @@ a.text-dark:hover, a.text-dark:focus {
 .infinite-section {
   background: transparent;
   position: relative;
-  margin: 5rem 0 6rem;
   display: flex;
   justify-content: center;
 }
@@ -10048,7 +10079,6 @@ a.text-dark:hover, a.text-dark:focus {
 }
 .infinite-card .infinite-action {
   flex-shrink: 0;
-  margin-left: 2rem;
 }
 .infinite-card .infinite-action .btn {
   background: #ffffff;
